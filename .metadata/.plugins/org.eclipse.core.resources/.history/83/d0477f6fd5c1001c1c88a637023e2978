@@ -1,0 +1,102 @@
+package Pack01;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
+//숫자
+@RestController
+@RequestMapping("/s1")
+public class BppController {
+	@GetMapping("/{num}")
+	public Integer f1(@PathVariable String num) {
+		System.out.println(num);
+		Integer result = Integer.parseInt(num);
+		return result;
+
+	}
+}
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+class Person{
+	String name;
+	int age;
+}
+
+
+
+//문자열
+@RestController
+@RequestMapping("/s2")
+class BppController2 {
+	@GetMapping("/{num}")
+	public String f1(@PathVariable String num) {
+		System.out.println(num);
+		String result =  "호랑이";
+		return result;
+
+	}
+}
+
+//문자열
+@RestController
+@RequestMapping("/s3")
+class BppController3 {
+	@GetMapping("/{num}")
+	public Person f1(@PathVariable String num) {
+		System.out.println(num);
+		Person result = new Person("호랑이",20);
+		return result;
+
+	}
+}
+
+
+
+//문자열
+@RestController
+@RequestMapping("/s4")
+class BppController4 {
+	@GetMapping("/{num}")
+	public Integer[] f1(@PathVariable String num) {
+		System.out.println(num);
+		Person result = new Person("호랑이",20);
+		
+		Integer[] ar = {10, 20, 30};
+		
+		return ar;
+
+	}
+}
+
+
+
+
+
+
+//package Pack01;
+//
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.PathVariable;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RestController;
+//
+//@RestController
+//@RequestMapping("/bpp")
+//public class BppController {
+//	@GetMapping("/{bppNum}")
+//	public String f1(@PathVariable String bppNum) {
+//		System.out.println(1111);
+//		return "BppController" + bppNum;
+//	}
+//}

@@ -1,0 +1,14 @@
+package Pack01;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Tiger {
+	@RequestMapping("/t1")
+	public String f1() {
+		System.out.println("f1 call");
+	
+		return "TigerView";
+	}
+}

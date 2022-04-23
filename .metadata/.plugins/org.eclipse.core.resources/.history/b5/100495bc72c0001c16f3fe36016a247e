@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+
+<script src="//code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	function f1(){
+		console.log("클릭됨");
+		$.ajax( {
+			url:"http://localhost:8081/t1",
+			type:"GET"
+		} ).then( function(data){
+			console.log(data.factorA);
+			console.log(data.factorB);
+			let s1 = document.getElementById("span1");
+			let s2 = document.getElementById("span2");
+			s1.textContent = data.factorA;
+			s2.textContent = data.factorB;
+		} );
+	}
+</script>
+
+<body>
+	<h1>index</h1>
+	<a href="t1">기본 컨트롤러 확인</a><br/>
+	<button onClick="f1()">문제요청</button>
+	<span id="span1"></span> *
+	<span id="span2"></span> = ?
+	
+	<form id="form1" name="form1" method="post">
+		<input type="text" name="alias" value="tiger"/><br/>
+		<input type="text" name="attempt" value="200"/><br/>
+		<input type = "button" value = "전송" onclick="f2();"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+//package Pack01;
+//
+//import org.springframework.stereotype.Controller;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RestController;
+//
+//@Controller
+//public class Tiger {
+//	@RequestMapping("/")
+//	public String f0() {
+//		System.out.println("f0 call");
+//	
+//		return "index";
+//	}
+//	
+//	@RequestMapping("/t1")
+//	public String f1() {
+//		System.out.println("f1 call");
+//	
+//		return "TigerView";
+//		//return "redirect:/"; 뒤로 가기 필요없이 이동하지말고 컨트롤러만 call이 되는 지 확인
+//	}
+//	
+//	
+//	
+//	
+//	
+//}
+//

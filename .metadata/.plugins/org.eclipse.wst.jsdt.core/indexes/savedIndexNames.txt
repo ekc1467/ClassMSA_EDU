@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\Users\BIT\eclipse-workspace-MSA\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1279389754.index
+719659759.index
+1345327224.index
+3519467883.index
+1592421772.index
+1438648688.index
+1221558481.index
+2871016647.index
